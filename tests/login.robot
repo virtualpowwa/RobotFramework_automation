@@ -22,6 +22,7 @@ TC-002 Invalid Password Shows Error
     Input Text    ${USERNAME_FIELD}    standard_user
     Input Text    ${PASSWORD_FIELD}    wrong_password
     Click Button    ${LOGIN_BUTTON}
+    Wait Until Element Is Visible    ${ERROR_MESSAGE}    timeout=5s
     Element Should Contain    ${ERROR_MESSAGE}    do not match
     Go To    https://www.saucedemo.com/
 
@@ -29,4 +30,5 @@ TC-003 Locked Out User Is Blocked
     Input Text    ${USERNAME_FIELD}    locked_out_user
     Input Text    ${PASSWORD_FIELD}    secret_sauce
     Click Button    ${LOGIN_BUTTON}
+    Wait Until Element Is Visible    ${ERROR_MESSAGE}    timeout=5s
     Element Should Contain    ${ERROR_MESSAGE}    locked out

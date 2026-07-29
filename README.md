@@ -21,3 +21,5 @@ This generates `log.html`, `report.html`, and `output.xml` with the results.
 ## Test coverage
 
 - `tests/login.robot` — TC-001 (valid login), TC-002 (invalid password), TC-003 (locked-out user)
+
+## python -m robot tests/login.robot
